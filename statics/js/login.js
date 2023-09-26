@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     if ($(".forgot-pos-password").length) {
         $('.forgot-pos-password').click(function () {
             $('.login-form-view').hide();
