@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  padding: 0 !important;
+}
+
+@media screen and (max-height: 600px), screen and (max-width: 500px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+.error {
+  color: #F00;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  display: block;
+  padding-top: 5px;
+}
+
+.bota_login_style {
+  background: url(../imgs/bg-login.jpg) no-repeat fixed bottom;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .bota_login_style {
+    min-width: 100vh;
+  }
+}
+
+.form-login {
+  max-width: 430px;
+  padding: 0;
+  position: relative;
+  border-radius: 14px !important;
+  background: #FFF;
+  box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.login-form-view {
+  padding: 30px 30px 44px;
+
+  .bota_header .logo {
+    margin: auto;
+    display: block;
+  }
+}
+
+.bota_login_style {
+  padding: 70px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.login-form-view .bota_header h1 {
+  color: #1B1B1B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 17px;
+}
+
+.login-form-block {
+  margin-top: 35px;
+
+  .form-group {
+    margin-bottom: 16px;
+    position: relative;
+
+    input {
+      border-radius: 8px;
+      border: 1px solid #DEDEDE;
+      height: 44px;
+      width: 100%;
+      padding: 0 16px;
+      outline: none;
+
+      &:focus {
+        border: 1px solid #4adf66;
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: #BCBCBC;
+  opacity: 1;
+}
+
+:-ms-input-placeholder, ::-ms-input-placeholder {
+  color: #BCBCBC;
+}
+
+.icon-eye, .icon-eye-slash {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  display: none;
+}
+
+.input-inline-button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 1;
+  height: 44px;
+  padding: 0;
+  width: 42px;
+
+  &:not(.show) .icon-eye-slash {
+    display: block;
+  }
+
+  &.show .icon-eye-slash, &:not(.show) .icon-eye {
+    display: none;
+  }
+
+  &.show .icon-eye {
+    display: block;
+  }
+}
+
+.page-login label {
+  padding-left: 30px;
+  line-height: 15px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+
+  #filter-envogends {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: 0 0;
+    outline: 0;
+    opacity: 0;
+    display: block;
+    z-index: 9;
+    width: 20px;
+    height: 20px;
+  }
+
+  .fa {
+    margin-right: 6px;
+    width: 14px;
+    font-size: 14px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    left: 0;
+  }
+
+  input {
+    + .fa {
+      &:before {
+        content: "";
+        margin-right: 5px;
+        font-size: 18px;
+        border: solid 1px #ebebeb;
+        line-height: 40px;
+        position: absolute;
+        top: -5px;
+        height: 24px;
+        width: 24px;
+        background: #fff;
+        border-radius: 3px;
+      }
+
+      &:after {
+        font-family: 'Font Awesome 5 Pro';
+        position: absolute;
+        font-size: 13px;
+        top: 0px;
+        left: 5px;
+        transition: 0.3s;
+        height: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &:checked + {
+      span {
+        color: #4adf66;
+      }
+
+      .fa:after {
+        content: "";
+      }
+    }
+
+    + span:after {
+      content: "";
+    }
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > {
+    .col, [class*=col-] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+.display-none, .display-hide {
+  display: none;
+}
+
+.forgot-pos-password {
+  display: block;
+  float: right;
+  color: #76A5FF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.login-form-block button {
+  border-radius: 8px;
+  background: linear-gradient(262deg, #48E064 25.59%, #47C566 70.26%);
+  border: none;
+  color: #fff;
+  padding: 13px 41px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 34px auto 22px;
+  display: block;
+  cursor: pointer;
+  transition: all .5s ease;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+
+  &:before {
+    content: "";
+    border-radius: 45px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.04);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+  }
+
+  &:hover:before, &:focus:before, &:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.bota_register_link {
+  a {
+    color: #343434;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    transition: all .5s ease;
+
+    &:hover {
+      color: #4adf66;
+    }
+  }
+
+  text-align: center;
+}
+
+.forgot-pass-view {
+  padding: 30px 30px 44px;
+  display: none;
+
+  .page-login p {
+    text-align: center;
+    color: #999;
+  }
+
+  &.pass-block {
+    display: block;
+  }
+
+  .bota_header {
+    .logo {
+      margin: auto;
+      display: block;
+    }
+
+    h2 {
+      color: #1B1B1B;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+      margin-top: 17px;
+    }
+  }
+}
+
+.bnc-lostpassword {
+  margin-top: 35px;
+}
+
+.forgot-pass-view .page-login {
+  margin-bottom: 16px;
+  position: relative;
+
+  input {
+    border-radius: 8px;
+    border: 1px solid #DEDEDE;
+    height: 44px;
+    width: 100%;
+    padding: 0 16px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #4adf66;
+    }
+  }
+}
+
+.bota_login_style.animation-zoom3-out.notactive .login-form-view {
+  display: none;
+}
+
+.forgot-pass-view.forgot-pass-block.animation-zoom3 {
+  display: block;
+}
+
+.bota_footer {
+  .row {
+    align-items: center;
+  }
+
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  padding: 7px 0;
+  line-height: 1;
+  position: relative;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+.copyright a {
+  color: #fff;
+}
+
+.bota_footer .bota_footer_link {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 13px auto;
+
+  a {
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    position: relative;
+    transition: all .5s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: #4adf66;
+    }
+  }
+
+  li {
+    list-style: none;
+
+    + li:before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 100%;
+      top: 5px;
+    }
+
+    position: relative;
+
+    &:last-child a {
+      padding-right: 0;
+    }
+  }
+}
+
+.bota_account_bg {
+  background: #FAFAFA;
+  padding: 46px 48px;
+}
+
+@media (min-width: 992px) {
+  .bota_account_page .container {
+    max-width: 960px;
+  }
+}
+
+.bota_account_page {
+  background-color: #fff;
+}
+
+.user-form {
+  max-width: 450px;
+  margin: auto;
+
+  label {
+    color: #878787;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    min-width: 100px;
+  }
+
+  input {
+    border-radius: 10px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+    height: 40px;
+    padding: 0 12px;
+    outline: none;
+
+    &:focus {
+      border-color: #4adf66;
+    }
+
+    &[disabled] {
+      background: #edecec;
+    }
+  }
+}
+.bota_login_link {
+  a {
+    color: #343434;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    text-decoration-line: underline;
+    transition: all .5s ease;
+    font-weight: bold;
+
+    &:hover {
+      color: #4adf66;
+    }
+  }
+
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .form-login {
+    max-width: 430px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .bota_footer {
+    text-align: center;
+
+    .bota_footer_link {
+      justify-content: center;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .login-form-view {
+    padding: 30px 15px 44px;
+  }
+}

@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>ID BOTA - All in one</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="ID BOTA - Đăng nhập" name="description"/>
+        <meta content="@x-team BOTA" name="author"/>
+        <link rel="shortcut icon" href="statics/imgs/favicon.png" />
+        <link rel="icon" href="statics/imgs/favicon.png" />
+        <link href="statics/css/login.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="statics/js/jquery.min.js"></script>
+        <script type="text/javascript" src="statics/js/login.js"></script>
+    </head>
+    <body>
+        <div class="bota_login_style">
+            <div class="col-12">
+               <div class="container form-login">
+                  <div class="login-form-view">
+                     <div class="bota_header">
+                        <a href="index.html" title="logo">
+                        <img class="logo" alt="Bota" src="statics/imgs/logo.png" width="192" height="51">
+                        </a>
+                        <h1 class="title-center">Đăng nhập vào hệ thống</h1>
+                     </div>
+                     <div class="login-form-block">
+                        <!-- BEGIN LOGIN FORM -->
+                        <form class="login-form" name="login" action="" method="post">
+                           <div class="page-login">
+                              <div class="alert alert-danger display-hide">
+                                 <span>Hãy nhập tài khoản email và mật khẩu.</span>
+                              </div>
+                              <div class="alert alert-success display-hide">
+                                 <span>Đăng nhập thành công.</span>
+                              </div>
+                              <div class="form-group">
+                                 <input class="placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" data-error-required="Email không được để trống." data-error-email="Email không đúng định dạng."/>
+                              </div>
+                              <div class="form-group">
+                                 <input class="placeholder-no-fix" type="password" autocomplete="off" placeholder="Mật khẩu" name="password" data-error-required="Mật khẩu không được để trống." />
+                                 <a href="javascript:;" onclick="showPassword(this)" class="input-inline-button">
+                                 <img class="icon-eye-slash" src="statics/imgs/eye-slash.svg">
+                                 <img class="icon-eye" src="statics/imgs/eye.svg">
+                                 </a>
+                              </div>
+                              <div class="form-group row margin-sm-bottom">
+                                 <div class="form-checkbox checkbox-confirm d-flex col-6">
+                                    <label for="filter-envogends">
+                                    <input class="savelog" id="filter-envogends" name="remember" type="checkbox" value="1" />
+                                    <i class="fa"></i>
+                                    <span>Ghi nhớ đăng nhập</span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 forget-pass">
+                                    <a href="javascript:void(0)" class="forgot-pos-password">Quên mật khẩu ?</a>
+                                 </div>
+                              </div>
+                              <input type="hidden" name="service" value=""/>
+                              <input type="hidden" name="cont" value=""/>
+                              <input type="hidden" name="w" value=""/>
+                              <button type="submit">Đăng nhập</button>
+                              <div class="bota_register_link">
+                                 <a href="https://aff.bota.vn/embed-register?service=/&nxtref=&aff_url=undefined&ref_mkt=" title="Tạo tài khoản ngay" target="_blank">Tạo tài khoản ngay</a>
+                              </div>
+                           </div>
+                        </form>
+                        <!-- END LOGIN FORM -->
+                     </div>
+                  </div>
+                  <script type="text/javascript">
+                     function showPassword(btn) {
+                     if ($(btn).hasClass('show')) {
+                     $(btn).addClass('show').removeClass('show');
+                     $(btn).parent().children('input[type="text"]').attr('type', 'password');
+                     } else {
+                     $(btn).removeClass('show').addClass('show');
+                     $(btn).parent().children('input[type="password"]').attr('type', 'text');
+                     }
+                     }
+                  </script>
+                  <!-- BEGIN FORGOT PASSWORD FORM -->
+                  <div class="forgot-pass-view forgot-pass-block">
+                     <div class="bota_header">
+                        <a href="index.html" title="logo">
+                        <img class="logo" alt="Bota" src="statics/imgs/logo.png" width="192" height="51">
+                        </a>
+                        <h2 class="title-center">Quên mật khẩu ?</h2>
+                     </div>
+                     <div class="login-form-block">
+                        <div class="bnc-lostpassword notactive">
+                           <form class="forget-form" name="forget-form" action="index.html" method="post">
+                              <div class="page-login">
+                                 <p>
+                                    Hãy nhập email để lấy lại mật khẩu.
+                                 </p>
+                                 <div class="alert alert-danger display-hide">
+                                    <span></span>
+                                 </div>
+                                 <div class="alert alert-success display-hide">
+                                    <span>Đăng nhập thành công.</span>
+                                 </div>
+                                 <div class="form-group">
+                                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" data-error-required="Email không được để trống." data-error-email="Email không đúng định dạng."/>
+                                 </div>
+                                 <button type="submit"> Gửi</button>
+                                 <div class="bota_login_link">
+                                    Đã có tài khoản<a href="javascript:void(0);" title="Đăng nhập ngay" id="back-btn"> Đăng nhập ngay</a>
+                                </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- END FORGOT PASSWORD FORM -->
+               </div>
+            </div>
+            <!-- BEGIN COPYRIGHT -->
+            <div class="col-12">
+            <div class="bota_footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-7 col-sm-12 col-12">
+                        <div class="copyright">Copyright © 2023 bota.vn - Giải pháp quản lý và bán hàng đa kênh toàn diện</div>
+                     </div>
+                     <div class="col-xl-6 col-lg-5 col-sm-12 col-12">
+                        <ul class="bota_footer_link">
+                           <li>
+                              <a href="tel:19002008" title="Trung tâm trợ giúp">
+                              Trung tâm trợ giúp
+                              </a>
+                           </li>
+                           <li>
+                              <a href="tel:19002008" title="Ý kiến phản hồi">
+                              Ý kiến phản hồi
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </body>
+</html>
