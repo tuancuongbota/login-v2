@@ -296,6 +296,8 @@ img {
   transition: all .5s ease;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  outline: none;
+  box-shadow: unset;
 
   &:before {
     content: "";

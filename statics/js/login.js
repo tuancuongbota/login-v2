@@ -17,6 +17,9 @@ $(document).ready(function () {
             password: {
                 required: "Mật khẩu không được để trống."
             }
+        },
+        submitHandler: function(form) {
+            $(".alert-success").show();
         }
     });
     $("#forget-form").validate({
@@ -31,6 +34,13 @@ $(document).ready(function () {
                 required: "Email không được để trống.",
                 email: "Email không đúng định dạng."
             },
+        },
+        submitHandler: function(form) {
+            $(".processing-message").show();
+            setTimeout(function() {
+                $(".processing-message").hide();
+                $(".success-message").show();
+            }, 2000);
         }
     });
     if ($(".forgot-pos-password").length) {
