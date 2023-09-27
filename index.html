@@ -26,7 +26,7 @@
                      </div>
                      <div class="login-form-block">
                         <!-- BEGIN LOGIN FORM -->
-                        <form class="login-form" name="login" action="" method="post">
+                        <form class="login-form" id="login-form" name="login" action="index.html" method="post">
                            <div class="page-login">
                               <div class="alert alert-danger display-hide">
                                  <span>Hãy nhập tài khoản email và mật khẩu.</span>
@@ -89,19 +89,11 @@
                      </div>
                      <div class="login-form-block">
                         <div class="bnc-lostpassword notactive">
-                           <form class="forget-form" name="forget-form" action="index.html" method="post">
+                           <form class="forget-form" name="forget-form" id="forget-form" action="index.html" method="post">
                               <div class="page-login">
-                                 <p>
-                                    Hãy nhập email để lấy lại mật khẩu.
-                                 </p>
-                                 <div class="alert alert-danger display-hide">
-                                    <span></span>
-                                 </div>
-                                 <div class="alert alert-success display-hide">
-                                    <span>Đăng nhập thành công.</span>
-                                 </div>
+                                 <p>Hãy nhập email để lấy lại mật khẩu.</p>
                                  <div class="form-group">
-                                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" data-error-required="Email không được để trống." data-error-email="Email không đúng định dạng."/>
+                                    <input class="placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" data-error-required="Email không được để trống." data-error-email="Email không đúng định dạng."/>
                                  </div>
                                  <button type="submit"> Gửi</button>
                                  <div class="bota_login_link">

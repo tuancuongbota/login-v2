@@ -102,7 +102,10 @@ img {
       width: 100%;
       padding: 0 16px;
       outline: none;
-
+      &.error {
+        border-color: #F00;
+        font-size: 14px;
+      }
       &:focus {
         border: 1px solid #4adf66;
       }
@@ -158,80 +161,86 @@ img {
   }
 }
 
-.page-login label {
-  padding-left: 30px;
-  line-height: 15px;
-  align-items: center;
-  position: relative;
-  display: flex;
-  font-size: 14px;
-  font-weight: 400;
-  cursor: pointer;
-
-  #filter-envogends {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    background: 0 0;
-    outline: 0;
-    opacity: 0;
-    display: block;
-    z-index: 9;
-    width: 20px;
-    height: 20px;
-  }
-
-  .fa {
-    margin-right: 6px;
-    width: 14px;
+.page-login {
+    .error {
+      padding-left: 0;
+      font-size: 12px;
+    }
+    label {
+    padding-left: 30px;
+    line-height: 15px;
+    align-items: center;
+    position: relative;
+    display: flex;
     font-size: 14px;
-    line-height: 40px;
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    left: 0;
-  }
+    font-weight: 400;
+    cursor: pointer;
 
-  input {
-    + .fa {
-      &:before {
-        content: "";
-        margin-right: 5px;
-        font-size: 18px;
-        border: solid 1px #ebebeb;
-        line-height: 40px;
-        position: absolute;
-        top: -5px;
-        height: 24px;
-        width: 24px;
-        background: #fff;
-        border-radius: 3px;
-      }
-
-      &:after {
-        font-family: 'Font Awesome 5 Pro';
-        position: absolute;
-        font-size: 13px;
-        top: 0px;
-        left: 5px;
-        transition: 0.3s;
-        height: 14px;
-        line-height: 16px;
-      }
+    #filter-envogends {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      background: 0 0;
+      outline: 0;
+      opacity: 0;
+      display: block;
+      z-index: 9;
+      width: 20px;
+      height: 20px;
     }
 
-    &:checked + {
-      span {
-        color: #4adf66;
+    .fa {
+      margin-right: 6px;
+      width: 14px;
+      font-size: 14px;
+      line-height: 40px;
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      left: 0;
+    }
+
+    input {
+      + .fa {
+        &:before {
+          content: "";
+          margin-right: 5px;
+          font-size: 18px;
+          border: solid 1px #ebebeb;
+          line-height: 40px;
+          position: absolute;
+          top: -5px;
+          height: 24px;
+          width: 24px;
+          background: #fff;
+          border-radius: 3px;
+        }
+
+        &:after {
+          font-family: 'Font Awesome 5 Pro';
+          position: absolute;
+          font-size: 13px;
+          top: 0px;
+          left: 5px;
+          transition: 0.3s;
+          height: 14px;
+          line-height: 16px;
+        }
       }
 
-      .fa:after {
+      &:checked + {
+        span {
+          color: #4adf66;
+        }
+
+        .fa:after {
+          content: "";
+        }
+      }
+
+      + span:after {
         content: "";
       }
-    }
-
-    + span:after {
-      content: "";
     }
   }
 }
@@ -377,7 +386,10 @@ img {
     width: 100%;
     padding: 0 16px;
     outline: none;
-
+    &.error {
+      border-color: #F00;
+      font-size: 14px;
+    }
     &:focus {
       border: 1px solid #4adf66;
     }
